@@ -19,6 +19,12 @@
     /*Font from fonts.google.com*/
 }
 
+html {
+    scroll-padding-top: 50px;
+    /*Adds a bit of padding between the navbar and the "link" location on the page when clicking on the link in
+    the navbar*/
+}
+
 /* Make all elementst to include padding and border in element's total width and height.*/
 * {
     box-sizing: border-box;
