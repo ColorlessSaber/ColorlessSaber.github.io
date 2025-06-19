@@ -1,0 +1,348 @@
+/*General Styling Sheet for Michael Heilman's Portfolio website*/
+
+/*Import link for Ubuntu Font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*Import link for Roboto Font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Global CSS variables*/
+:root {
+    --main-color: #00BAE1;
+    --image-card-color: #3490c4;
+    --text-card-color: #27a4bd;
+    --hover-link-color: #008BFF;
+    --opening-text-color: #d8e5e9;
+    --header-font-family: "Ubuntu", sans-serif;
+    /*Font from fonts.google.com*/
+    --parag-font-family: "Roboto", sans-serif;
+    /*Font from fonts.google.com*/
+}
+
+/* Make all elementst to include padding and border in element's total width and height.*/
+* {
+    box-sizing: border-box;
+}
+
+/* *** General Styling *** */
+body {
+    margin: 0%;
+    /*Ensures the site displays all the way to the edge of the browser screen*/
+    overflow-x: hidden;
+    /*Removes left to right scroll bar*/
+}
+
+h1 {
+    text-transform: uppercase;
+    /*Capitalizes all letters in header*/
+    font-family: var(--header-font-family);
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Make the header be bigger slightly when hovered over */
+h1:hover {
+    filter: grayscale(5%);
+    /*Adds a slight gray filter to the header*/
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* A class to override color of the header to white */
+.opening-text {
+    color: var(--opening-text-color);
+}
+
+p {
+    font-family: var(--parag-font-family);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: 1px;
+    /*Expands the text spacing slightly*/
+}
+
+p:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* A class to center text */
+.center {
+    text-align: center;
+}
+
+a {
+    color: blue;
+    /*Ensures all links are blue*/
+}
+
+/* Stylize the quote */
+q {
+    font-style: italic;
+}
+
+/* For screens 576px and smaller, display the expanding text when hovered over */
+@media screen and (max-width: 576px) {
+    p:hover {
+        transform: scale(1.0);
+        transition: transform 0s;
+    }
+
+    h1:hover {
+        transform: scale(1.0);
+        transition: transform 0s;
+    }
+}
+
+img {
+    filter: saturate(30%);
+    /* Saturate the image a bit to give it a unique style before being hovered over */
+    border-radius: 8px;
+    height: 340px;
+    width: auto;
+    /* sets the height for the image and width is set auto to allow height change*/
+    margin: auto;
+}
+
+/* Add a hover affect that brings back the full color */
+img:hover {
+    filter: saturate(100%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* For screens 576px and smaller, the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+footer {
+    padding: 1%;
+    margin: 0px -8px -8px -8px;
+    /*Margin order: top, right, bottom, left.*/
+    background-color: var(--main-color);
+    bottom: 0;
+    /* Places footer at bottom of the browser screen */
+}
+/* *** End of General Styling *** */
+
+/* *** Navbar Styling *** */
+nav {
+    background-color: var(--main-color);
+    position: fixed;
+    /* Keeps the navbar in the same position relative to the user scrolling*/
+    top: 0;
+    /* Places the navbar at the top of the browser screen */
+    width: 100%;
+    z-index: 1;
+    /* Places the navbar above all content on the page */
+    -webkit-animation: moveNav 4.75s;
+    /* Applies the moveNav animation for Safari 4.0 - 8.0 */
+    animation: moveNav 4.75s;
+    /* Applies moveNav animation for all other browsers */
+}
+
+/* have the navbar hidden when the screen is loaded and then bring it in from the left side of screen */
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/* Change styling for the anchor links in the navbar */
+nav a {
+    float: left;
+    display: block;
+    /* Ensure the other text will be displayed on the same line or row */
+    color: black;
+    padding: 14px 16px;
+    /* Padding order: top and bottom; left and right*/
+    text-decoration: none;
+    /* Removes the underline from the anchor text */
+    font-family: var(--header-font-family);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    /* Setting the text position to relative will allow the moveNavText animation to work */
+    -webkit-animation: moveNavText 5.75s;
+    /* Applies the moveNavText animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 5.75s;
+    /* Applies moveNavText animation for all other browsers */
+}
+
+nav a:hover {
+    background-color: var(--hover-link-color);
+    color: white;
+}
+
+/* have the navbar links be hidden when the screen is loaded and then bring them down from the top of screen */
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* For screens 576px and smaller, display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    /* When the screen is smaller, the navbar links don't come stright down due to be affected by navbar's animation.
+    To fix this, reduced the time by 0.25 seconds*/
+    nav {
+    -webkit-animation: moveNav 4.5s;
+    /* Applies the moveNav animation for Safari 4.0 - 8.0 */
+    animation: moveNav 4.5s;
+    /* Applies moveNav animation for all other browsers */
+    }
+    
+    nav a {
+        width: 25%;
+        font-size: 15px;
+        padding: 14px 0px;
+        /* Padding order: top and bottom; left and right*/
+    }
+}
+
+/* *** End of Navbar Styling *** */
+
+/* *** Back ground Video and Text Overlay Styling ** */
+#program-screen-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    /* The right and bottom set to zero makes sure there is no space between the left and right, and top and bottom, repsectively */
+    z-index: -1;
+    /* Sets video below all aother content on page */
+    min-width: 100%;
+}
+
+.text-over-video {
+    background: rgba(0,0,0,0.5);
+    color: var(--opening-text-color);
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    /* Setting the text position to relative will allow the moveVideoText animation to work */
+    -webkit-animation: moveVideoText 5.75s;
+    /* Applies the moveNavText animation for Safari 4.0 - 8.0 */
+    animation: moveVideoText 5.75s;
+    /* Applies moveNavText animation for all other browsers */
+}
+
+/* have the video-text be hidden when the screen is loaded and then bring it down from the top of screen */
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/* For screens 576px and smaller, make the background video disappear */
+@media screen and (max-width: 576px) {
+    #program-screen-video {
+        display: none;
+    }
+}
+
+/* *** End of Back ground Video and Text Overlay Styling ** */
+
+/* *** Content Styling *** */
+/* This section covers the styling of the text-cards and image-cards */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-card {
+    float: left;
+    width: 50%;
+    /* Ensures the column takes up half of the page width */
+    padding-top: 1%;
+    height: 400px;
+    background-color: var(--text-card-color);
+}
+
+/* Targets the paragraphs within the text-card class */
+.text-card p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.image-card {
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    /* Ensures the column takes up half of the page width */
+    height: 400px;
+    background-color: var(--image-card-color);
+}
+
+/* Targets the image card that is also a clickable link */
+.image-card a{
+    margin: auto;
+}
+
+.tall-card {
+    height: 450px;
+}
+
+/* For screens 576px and smaller, will display the scroll bar if the text overflows the column height.
+Affects only the text-card, not the whole web page. */
+
+@media screen and (max-width: 576px) {
+    .text-card {
+        overflow: auto;
+    }
+}
+
+/* *** End of Content Styling *** */
+
+/* *** Contact Form Styling *** */
+label {
+    font-family: var(--parag-font-family);
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+input[type=text]{
+    width: 75%;
+    padding: 12px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    /* Adds padding in all direction within the text box */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:hover {
+    box-shadow: 0.5px 0.5px 5px #00004d inset;
+}
+
+input[type=submit] {
+    display: block;
+    background-color: #cbcbcb;
+    color: black;
+    font-family: var(--header-font-family);
+    font-weight: bold;
+    border: none;
+    /*Removes the border around the button*/
+    border-radius: 4px;
+    padding: 12px 20px;
+    /* Padding order: top and bottom; left and right*/
+    cursor: pointer;
+    /* Change sthe cursor to a point when over the submit button */
+    margin-left: auto;
+    margin-right: auto;
+    /* Both margin-left and margin-right centers the button in the text-card */
+}
+
+input[type=submit]:hover {
+    background-color: #d5e9ea;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+/* *** End of Contact Form Styling *** */
