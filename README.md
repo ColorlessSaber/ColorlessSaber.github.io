@@ -29,7 +29,7 @@
 
 <!-- About the Project -->
 ## About the Project
-This is my portfolio site created while studying at the [Tech Academy][tech-academy-url].<br>
+This is my portfolio site created while studying at [The Tech Academy][tech-academy-url].<br>
 Demonstrates the knowledge that I have learned while at the Tech Academy.
 
 <!-- Built With -->
@@ -55,6 +55,7 @@ Please head to my porfolio website and use the contact form to reach out to me:
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
+* [The Tech Academy](tech-academy-url)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
