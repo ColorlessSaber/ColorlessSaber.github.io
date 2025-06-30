@@ -29,13 +29,14 @@
 
 <!-- About the Project -->
 ## About the Project
-This is my portfolio site created while studying at [The Tech Academy][tech-academy-url].<br>
-Demonstrates the knowledge that I have learned while at the Tech Academy.
+This is my portfolio site I've created while studying at [The Tech Academy][tech-academy-url].
+Built using HTML, CSS, and JavaScript.
 
 <!-- Built With -->
 ## Built With
 * [![HTML5][html-shield]][html-url]
 * [![CSS][css-shield]][css-url]
+* [![JavaScript][javascript-shield]][javascript-url]
 
 <!-- License -->
 ## License
@@ -45,7 +46,7 @@ Distributed under the GPL-3.0 License. See 'LICENSE.txt' for more information.
 
 <!-- Conact -->
 ## Contact
-Please head to my portfolio website and use the contact form to reach out to me:
+Please head over to my portfolio website and use the contact form to reach out to me:
 [My Portfolio Website][portfolio-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -75,6 +76,8 @@ Please head to my portfolio website and use the contact form to reach out to me:
 [css-url]: https://www.w3.org/Style/CSS/Overview.en.html
 [html-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://html.spec.whatwg.org/multipage/
+[javascript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 [portfolio-url]: https://colorlesssaber.github.io/
 [tech-academy-url]: https://www.learncodinganywhere.com/

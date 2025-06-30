@@ -7,32 +7,34 @@
     <meta charset="UTF-8">
     <meta name="Viewport" content="width=device-width">
     <title>Michael Heilman Portfolio</title>
+    <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
     <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 </head>
 
 <!--body-->
 
-<body>
+<body class="background">
     <!--Navbar-->
     <nav>
         <a href="#">Home</a>
+        <a href="#slideshow">Slideshow</a>
         <a href="#about">About</a>
         <a href="#github">GitHub</a>
-        <a href="#contact">Contact</a>
+        <a onclick="openForm()" ondbclick="closeForm()" class="contact">Contact</a>
     </nav>
 
     <!-- ***Video with text over it*** -->
     <!--Background video-->
     <div>
         <video autoplay muted loop id="program-screen-video">
-            <source src="./videos/coding.mp4" type="video/mp4" alt="A video showing a programmer's screen">
+            <source src=".//images/video/coding.mp4" type="video/mp4" alt="A video showing a programmer's screen">
             <!--Display message below if video fails to run in user's browser-->
             Your browser does not support HTML5 video
         </video>
     </div>
     <!--Text over video-->
     <div class="text-over-video">
-        <h1>Michael Heilman's Portfolio</h1>
+        <h1 class="opening-text">Michael Heilman's Portfolio</h1>
         <p class="center">
             <q>
                 The important thing is not to stop questioning;<br>
@@ -43,6 +45,47 @@
             It contains information about my background and work experience.<br><br>
             Thank you for stopping by, and feel free to reach out via the contact form below.
         </p>
+    </div>
+
+    <!-- slideshow section -->
+    <div id="slide-show">
+        <div id="slideshow-background">
+            <div id="slideshow-container">
+                <!-- slide 1 of 4 -->
+                <div class="my-slides fade">
+                    <img class="slideshow-image" src="./images/personal_photo.jpg" alt="Picture of Michael Heilman">
+                    <div class="slideshow-text">I'm available to assist you on your project!</div>
+                </div>
+                <!-- slide 2 of 4 -->
+                <div class="my-slides fade">
+                    <img class="slideshow-image" src="./images/HTML_CSS_and_JavaScript.jpeg"
+                        alt="HTML, CSS, and JS logos">
+                    <div class="slideshow-text">I'm a full-stack software developer,<br>trained in:<br>HTML, CSS,
+                        JavaScript,</div>
+                </div>
+                <!-- slide 3 of 4 -->
+                <div class="my-slides fade">
+                    <img class="slideshow-image" src="./images/Python.png" alt="Python Logo">
+                    <div class="slideshow-text">the popular programming language Python,</div>
+                </div>
+                <!-- slide 4 of 4 -->
+                <div class="my-slides fade">
+                    <img class="slideshow-image" src="./images/SQL_and_Database.jpg" alt="SQL logo">
+                    <div class="slideshow-text">back end development, databases and SQL.</div>
+                </div>
+                <!-- Previous and next buttons -->
+                 <a class="previous" onclick="plusSlide(-1)">&#10094;</a>
+                 <a class="next" onclick="plusSlide(1)">&#10095;</a>
+            </div>
+            <br> <!-- Add a space between the slideshow images and the dots-->
+            <!-- The slideshow dots -->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
     </div>
 
     <!--About Seciton-->
@@ -59,9 +102,8 @@
                 and six years of work experience,
                 I'm exicited to start a new chapter in my career in the tech industry.<br><br>
                 I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s
-                Python Developer Bootcamp, and trained and experienced in the following programming languages: HTML, CSS, JavaScript, SQl, and
-                more.<br><br>
-                <a href="#Contact">Contact</a> me below if you wish discuss possible career opportunities.
+                Python Developer Bootcamp, trained in the following programming languages: HTML, CSS, JavaScript, SQl,
+                and more.
             </p>
         </div>
     </div>
@@ -78,29 +120,26 @@
         </div>
         <!--Image Card in Right Column-->
         <div class="image-card">
-            <a href="https://github.com/ColorlessSaber" target="_blank"><img src="./images/GitHub.png"
-                    alt="Github Logo"></a>
+            <img src="./images/GitHub.png" alt="Github Logo">
         </div>
     </div>
 
-    <!--Contact Section-->
-    <div class="row" id="contact">
-        <!--Image Card in Left Column-->
-        <div class="image-card tall-card">
-            <img src="./images/contact-image.jpg" alt="Photo of two old wired phones">
-        </div>
-        <!--Text Card in Right Column-->
-        <div class="text-card tall-card">
-            <h1>Contact</h1>
-            <!--Utilizing Formspree to collect the conact form data-->
-            <form action="https://formspree.io/f/mjkrogwo" method="POST">
-                <label>Name:</label><br>
-                <input type="text" placeholder="Please enter your name here"><br>
-                <label>Email:</label><br>
-                <input type="text" id="email" name="Email" placeholder="Please enter your email here"><br>
-                <label>Message:</label><br>
-                <input type="text" id="message" name="message" placeholder="Please write your message here"><br><br>
-                <input type="submit" value="Submit">
+    <!-- Pop-up Contact Form-->
+    <div id="contact">
+        <button onclick="openForm()" class="pop-up-button">CONTACT</button>
+        <div class="form-popup" id="my-form">
+            <form action="https://formspree.io/f/mjkrogwo" method="POST" class="form-container"> <!--Utilizing Formspree to collect the contact form data-->
+                <h1>Contact</h1>
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="Please enter your name here" name="name" required><br>
+                <label for="phone">Phone:</label><br>
+                <input type="text" placeholder="Type your phone number here" name="phone"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" placeholder="Please enter your email here" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <input type="text" placeholder="Please write your message here" name="message"><br><br>
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
         </div>
     </div>
@@ -108,9 +147,12 @@
     <!--Footer Section-->
     <footer>
         <p>
-            <p class="center">Michael Heilman, Portofolio Website, 2025</p>
+        <p class="center">Michael Heilman, Portofolio Website, &copy;2025</p>
         </p>
     </footer>
+
+    <!--Load JavaScript-->
+    <script src="./js/javascript.js"></script>
 </body>
 
 </html>
