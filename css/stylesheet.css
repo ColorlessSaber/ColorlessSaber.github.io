@@ -393,12 +393,12 @@ nav a:hover {
     z-index: 8;
     /* Palce contact form above all content */
     display: none;
-}
-
-.form-container {
     position: fixed;
     bottom: .5vw;
     right: .5vw;
+}
+
+.form-container {
     width: 49vw;
     padding: 1vw;
     background-color: white;
