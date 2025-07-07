@@ -32,11 +32,16 @@
 This is my portfolio site I've created while studying at [The Tech Academy][tech-academy-url].
 Built using HTML, CSS, and JavaScript.
 
+Version 1.#.#: Uses just HTML, CSS, and JavaScript; and is a one-page website.
+
+Version 2.#.#: Uses HTML, CSS, JavaScript, and BootStrap to create a multi-page website.
+
 <!-- Built With -->
 ## Built With
 * [![HTML5][html-shield]][html-url]
 * [![CSS][css-shield]][css-url]
 * [![JavaScript][javascript-shield]][javascript-url]
+* [![Bootstrap][bootstrap-shield]][bootstrap-url]
 
 <!-- License -->
 ## License
@@ -57,6 +62,7 @@ Please head over to my portfolio website and use the contact form to reach out t
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
 * [The Tech Academy](tech-academy-url)
+* [Bootstrap](boostrap-url)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,6 +84,8 @@ Please head over to my portfolio website and use the contact form to reach out t
 [html-url]: https://html.spec.whatwg.org/multipage/
 [javascript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[bootstrap-shield]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://getbootstrap.com
 
 [portfolio-url]: https://colorlesssaber.github.io/
 [tech-academy-url]: https://www.learncodinganywhere.com/
