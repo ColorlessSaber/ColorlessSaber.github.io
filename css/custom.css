@@ -31,4 +31,8 @@ body {
     padding-top: 50px;
 }
 
+.img-fluid {
+    max-width: 75%;
+}
+
 /* *** End of General Styling *** */
