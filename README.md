@@ -30,7 +30,7 @@
 <!-- About the Project -->
 ## About the Project
 This is my portfolio site I've created while studying at [The Tech Academy][tech-academy-url].
-Built using HTML, CSS, and JavaScript.
+Built using HTML, CSS, JavaScript, and Bootstrap
 
 Version 1.#.#: Uses just HTML, CSS, and JavaScript; and is a one-page website.
 
