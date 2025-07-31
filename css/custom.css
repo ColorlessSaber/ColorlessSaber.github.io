@@ -8,15 +8,13 @@
 
 /*Global CSS variables*/
 :root {
-    --main-color: #00BAE1;
-    --image-card-color: #3490c4;
-    --text-card-color: #27a4bd;
-    --hover-link-color: #008BFF;
+    --nav-footer-color: #C6DBE7;
+    --body-color: #EAFCFF;
+    --card-background-color: white;
+    --hover-color: #ACB9CE;
     --opening-text-color: #d8e5e9;
-    --header-font-family: "Ubuntu", sans-serif;
-    /*Font from fonts.google.com*/
-    --parag-font-family: "Roboto", sans-serif;
-    /*Font from fonts.google.com*/
+    --header-font-family: "Ubuntu", sans-serif; /*Font from fonts.google.com*/
+    --parag-font-family: "Roboto", sans-serif; /*Font from fonts.google.com*/
 }
 
 html {
@@ -28,14 +26,83 @@ html {
 
 /* *** General Styling *** */
 body {
-    padding-top: 50px;
+    padding-top: 10vh;
+    background-color: var(--body-color);
 }
 
 .img-fluid {
     max-width: 75%;
 }
 
+p {
+    font-family: var(--parag-font-family);
+    line-height: 4vh;
+}
+
+h3 {
+    font-family: var(--header-font-family);
+}
+
+blockquote {
+    font-family: var(--parag-font-family);
+}
+
+figcaption {
+    font-family: var(--parag-font-family);
+}
+
 /* *** End of General Styling *** */
+
+/* *** Navbar Styling *** */
+nav {
+    background-color: var(--nav-footer-color);
+}
+
+#navbarOffcanvasLg {
+    background-color: var(--body-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.nav-item:hover{
+    background-color: var(--hover-color);
+}
+
+.nav-link {
+    font-family: var(--header-font-family);
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+/* *** End of Navbar Styling *** */
+
+/* *** Footer Styling *** */
+footer {
+    background-color: var(--nav-footer-color);
+}
+
+footer span {
+    font-family: var(--header-font-family);
+    font-size: 1vw;
+}
+
+/* *** End of Footer Styling *** */
+
+.card-title {
+    font-family: var(--header-font-family);
+}
+
+.card-subtitle {
+    font-family: var(--header-font-family);
+}
+
+/* *** Project Card Styling *** */
+
+
+/* *** End of Project Card Styling *** */
 
 /* *** Form Styling *** */
 form {
@@ -43,3 +110,60 @@ form {
     width: 30vw;
     margin: auto;
 }
+/* *** End of Form Styling *** */
+
+/* *** Media Query Section *** */
+@media screen and (max-width: 1050px) {
+    .navbar-brand {
+        font-size: 4vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 3.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    .navbar-brand {
+        font-size: 2.5vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    .navbar-brand {
+        font-size: 2.25vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    .navbar-brand {
+        font-size: 2vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 1.25vw;
+    }
+
+}
+
+@media screen and (min-width: 2270px) {
+    .navbar-brand {
+        font-size: 1.75vw;
+    }
+
+    .nav-link, footer span {
+        font-size: 1vw;
+    }
+
+}
+
+/* *** End of Query Section *** */
