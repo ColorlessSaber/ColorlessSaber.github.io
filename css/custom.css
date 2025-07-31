@@ -36,3 +36,10 @@ body {
 }
 
 /* *** End of General Styling *** */
+
+/* *** Form Styling *** */
+form {
+    display: table;
+    width: 30vw;
+    margin: auto;
+}
