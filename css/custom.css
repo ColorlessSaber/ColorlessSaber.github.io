@@ -37,10 +37,12 @@ body {
 p {
     font-family: var(--parag-font-family);
     line-height: 4vh;
+    font-size: 1vw;
 }
 
-h3 {
+h1, h3 {
     font-family: var(--header-font-family);
+    color: black;
 }
 
 blockquote {
@@ -69,6 +71,7 @@ nav {
 
 .nav-item:hover{
     background-color: var(--hover-color);
+    border-radius: 10px;
 }
 
 .nav-link {
@@ -91,6 +94,18 @@ footer span {
 
 /* *** End of Footer Styling *** */
 
+/* *** About Page Styling *** */
+
+.change-edu-img, .change-skill-img {
+    font-family: var(--parag-font-family);
+    font-size: 1vw;
+}
+
+/* *** End of About Page styling *** */
+
+
+/* *** Project Card Styling *** */
+
 .card-title {
     font-family: var(--header-font-family);
 }
@@ -99,31 +114,184 @@ footer span {
     font-family: var(--header-font-family);
 }
 
-/* *** Project Card Styling *** */
-
 
 /* *** End of Project Card Styling *** */
 
 /* *** Form Styling *** */
 form {
     display: table;
-    width: 30vw;
     margin: auto;
 }
+
+button[type="submit"] {
+    font-family: var(--parag-font-family);
+    background-color: white;
+    letter-spacing: 0.3vw;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+label {
+    font-family: var(--header-font-family);
+    font-size: 1vw;
+    text-decoration: underline;
+}
+
+input[type=text] {
+    font-family: var(--parag-font-family);
+    width: 40vw;
+}
+
+textarea {
+    font-family: var(--parag-font-family);
+}
+
 /* *** End of Form Styling *** */
 
 /* *** Media Query Section *** */
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3vw;
+    }
+
     .navbar-brand {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
     .nav-link, footer span  {
+        font-size: 3vw;
+    }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 3vw;
+    }
+
+    button[type="submit"] {
+        font-size: 3vw;
+    }
+
+    label {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 2.75vw;
+    }
+
+    .navbar-brand {
         font-size: 3.25vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 2.75vw;
+    }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 2.75vw;
+    }
+
+    button[type="submit"] {
+        font-size: 2.75vw;
+    }
+
+    label {
+        font-size: 2.75vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.5vw;
+    }
+
+    .navbar-brand {
+        font-size: 3.25vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 2.5vw;
+    }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 2.5vw;
+    }
+
+    button[type="submit"] {
+        font-size: 2.5vw;
+    }
+
+    label {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.25vw;
+    }
+
+    .navbar-brand {
+        font-size: 3vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 2.25vw;
+    }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 2.25vw;
+    }
+
+    button[type="submit"] {
+        font-size: 2.25vw;
+    }
+
+    label {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2vw;
+    }
+
+    .navbar-brand {
+        font-size: 2.75vw;
+    }
+
+    .nav-link, footer span  {
+        font-size: 2vw;
+    }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 2vw;
+    }
+
+    button[type="submit"] {
+        font-size: 2vw;
+    }
+
+    label {
+        font-size: 2vw;
     }
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 1.75vw;
+    }
+
     .navbar-brand {
         font-size: 2.5vw;
     }
@@ -131,9 +299,25 @@ form {
     .nav-link, footer span  {
         font-size: 1.75vw;
     }
+
+    .change-edu-img, .change-skill-img {
+        font-size: 1.75vw;
+    }
+
+    button[type="submit"] {
+        font-size: 1.75vw;
+    }
+
+    label {
+        font-size: 1.75vw;
+    }
 }
 
 @media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.5vw;
+    }
+
     .navbar-brand {
         font-size: 2.25vw;
     }
@@ -142,9 +326,24 @@ form {
         font-size: 1.5vw;
     }
 
+    .change-edu-img, .change-skill-img {
+        font-size: 1.5vw;
+    }
+
+    button[type="submit"] {
+        font-size: 1.5vw;
+    }
+
+    label {
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.25vw;
+    }
+
     .navbar-brand {
         font-size: 2vw;
     }
@@ -153,9 +352,24 @@ form {
         font-size: 1.25vw;
     }
 
+    .change-edu-img, .change-skill-img {
+        font-size: 1.25vw;
+    }
+
+    button[type="submit"] {
+        font-size: 1.25vw;
+    }
+
+    label {
+        font-size: 1.25vw;
+    }
 }
 
 @media screen and (min-width: 2270px) {
+    p {
+        font-size: 1vw;
+    }
+
     .navbar-brand {
         font-size: 1.75vw;
     }
@@ -164,6 +378,17 @@ form {
         font-size: 1vw;
     }
 
+    .change-edu-img, .change-skill-img {
+        font-size: 1vw;
+    }
+
+    button[type="submit"] {
+        font-size: 1vw;
+    }
+
+    label {
+        font-size: 1vw;
+    }
 }
 
 /* *** End of Query Section *** */
