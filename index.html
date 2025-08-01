@@ -1,158 +1,92 @@
-<!--Michael H.'s Portfolio Website-->
 <!DOCTYPE html>
 <html lang="en">
-<!--Head-->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="Viewport" content="width=device-width">
-    <title>Michael Heilman Portfolio</title>
+    <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <title>MH Portfolio - Home</title>
+    <!--Bootstrap CSS import-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!--Image icon for tab-->
     <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+    <!--Local CSS import-->
+    <link rel="stylesheet" href="./css/custom.css">
 </head>
 
-<!--body-->
-
-<body class="background">
-    <!--Navbar-->
-    <nav>
-        <a href="#">Home</a>
-        <a href="#slide-show">Slideshow</a>
-        <a href="#about">About</a>
-        <a href="#github">GitHub</a>
-        <a onclick="openForm()" ondbclick="closeForm()" class="contact">Contact</a>
+<body class="d-flex flex-column min-vh-100">
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand ms-2" href="index.html">MH Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Site Navigation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+</header>
 
-    <!-- ***Video with text over it*** -->
-    <!--Background video-->
-    <div>
-        <video autoplay muted loop id="program-screen-video">
-            <source src=".//images/video/coding.mp4" type="video/mp4" alt="A video showing a programmer's screen">
-            <!--Display message below if video fails to run in user's browser-->
-            Your browser does not support HTML5 video
-        </video>
-    </div>
-    <!--Text over video-->
-    <div class="text-over-video">
-        <h1 class="opening-text">Michael Heilman's Portfolio</h1>
-        <p class="center">
-            <q>
-                The important thing is not to stop questioning;<br>
-                curiosity has its own reason for existing.
-            </q><br>
-            -Albert Einstein<br><br>
-            Hello! My name is Michael Heilman, and I welcome you to my portfolio website.<br>
-            It contains information about my background and work experience.<br><br>
-            Thank you for stopping by, and feel free to reach out via the contact form below.
-        </p>
-    </div>
-
-    <!-- slideshow section -->
-    <div id="slide-show">
-        <div id="slideshow-background">
-            <div id="slideshow-container">
-                <!-- slide 1 of 4 -->
-                <div class="my-slides fade">
-                    <img class="slideshow-image" src="./images/personal_photo.jpg" alt="Picture of Michael Heilman">
-                    <div class="slideshow-text">I'm available to assist you on your project!</div>
-                </div>
-                <!-- slide 2 of 4 -->
-                <div class="my-slides fade">
-                    <img class="slideshow-image" src="./images/HTML_CSS_and_JavaScript.jpeg"
-                        alt="HTML, CSS, and JS logos">
-                    <div class="slideshow-text">I'm a full-stack software developer,<br>trained in:<br>HTML, CSS,
-                        JavaScript,</div>
-                </div>
-                <!-- slide 3 of 4 -->
-                <div class="my-slides fade">
-                    <img class="slideshow-image" src="./images/Python.png" alt="Python Logo">
-                    <div class="slideshow-text">the popular programming language Python,</div>
-                </div>
-                <!-- slide 4 of 4 -->
-                <div class="my-slides fade">
-                    <img class="slideshow-image" src="./images/SQL_and_Database.jpg" alt="SQL logo">
-                    <div class="slideshow-text">back end development, databases and SQL.</div>
-                </div>
-                <!-- Previous and next buttons -->
-                 <a class="previous" onclick="plusSlide(-1)">&#10094;</a>
-                 <a class="next" onclick="plusSlide(1)">&#10095;</a>
-            </div>
-            <br> <!-- Add a space between the slideshow images and the dots-->
-            <!-- The slideshow dots -->
-            <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
+<!-- Main Content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="d-flex justify-content-center mt-3">
+            <h1>Michael Heilman's Portfolio</h1>
         </div>
-    </div>
-
-    <!--About Seciton-->
-    <div class="row" id="about">
-        <!--Image Card in Left Column-->
-        <div class="image-card">
-            <img src="./images/about-me.jpg" alt="Photo of two old hand-held phones">
+        <div class="d-flex justify-content-center">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <q>
+                        The important thing is not to stop questioning;<br>
+                        curiosity has its own reason for existing.
+                    </q>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Albert Einstein
+                </figcaption>
+            </figure>
         </div>
-        <!--Text Card in Right Column-->
-        <div class="text-card">
-            <h1>About</h1>
-            <p>
-                A nerdy-engineer who has discovered a passion in coding! With a Master's Degree in Mechanical Engineer
-                and six years of work experience,
-                I'm exicited to start a new chapter in my career in the tech industry.<br><br>
-                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s
-                Python Developer Bootcamp, trained in the following programming languages: HTML, CSS, JavaScript, SQl,
-                and more.
+        <div class="d-flex justify-content-center">
+            <h3>Welcome to my Portfolio Website!</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p class="text-center">
+                I'm a nerdy engineer who has discovered a passion in coding! With a Master's Degree in Mechanical Engineer
+                and six years of work experience, I'm excited to start a new chapter in my career in the tech industry.<br>
+                Please head over to my <a href="about.html">About Page</a> to learn more about myself and my skills.<br>
+                Interested in getting in touch? Head over to my <a href="contact.html">Contact Page</a>.<br>
+                Thank you for visiting my website! This portfolio site has been built using HTML, CSS, Bootstrap, and jQuery.<br>
             </p>
         </div>
     </div>
+</main>
 
-    <!--Github Section-->
-    <div class="row" id="github">
-        <!--Text Card in Left Column-->
-        <div class="text-card">
-            <h1>Github</h1>
-            <p>
-                Check out my Github profile to see what kind of programming projects I have been up to!<br>
-            <p class="center"><a href="https://github.com/ColorlessSaber" target="_blank">Michael Heilman Github</a></p>
-            </p>
-        </div>
-        <!--Image Card in Right Column-->
-        <div class="image-card">
-            <img src="./images/GitHub.png" alt="Github Logo">
-        </div>
+<!-- Footer -->
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Copyright &copy; 2025 - Michael Heilman</span>
     </div>
+</footer>
 
-    <!-- Pop-up Contact Form-->
-    <div id="contact">
-        <button onclick="openForm()" class="pop-up-button">CONTACT</button>
-        <div class="form-popup" id="my-form">
-            <form action="https://formspree.io/f/mjkrogwo" method="POST" class="form-container"> <!--Utilizing Formspree to collect the contact form data-->
-                <h1>Contact</h1>
-                <label for="name">Name:</label><br>
-                <input type="text" placeholder="Please enter your name here" name="name" required><br>
-                <label for="phone">Phone:</label><br>
-                <input type="text" placeholder="Type your phone number here" name="phone"><br>
-                <label for="email">Email:</label><br>
-                <input type="text" placeholder="Please enter your email here" name="email" required><br>
-                <label for="message">Message:</label><br>
-                <input type="text" placeholder="Please write your message here" name="message"><br><br>
-                <button type="submit" class="btn">SUBMIT</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-            </form>
-        </div>
-    </div>
-
-    <!--Footer Section-->
-    <footer>
-        <p>
-        <p class="center">Michael Heilman, Portofolio Website, &copy;2025</p>
-        </p>
-    </footer>
-
-    <!--Load JavaScript-->
-    <script src="./js/javascript.js"></script>
+<!-- Bootstrap JS Import -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
 </body>
 
 </html>
