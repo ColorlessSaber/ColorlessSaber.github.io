@@ -137,7 +137,6 @@ button[type="submit"] {
 
 button:hover {
     background-color: var(--hover-color);
-    color: white;
 }
 
 label {
