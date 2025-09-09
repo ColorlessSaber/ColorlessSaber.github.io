@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 
 
-<!-- Project Sheilds -->
+<!-- Project Shields -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -50,7 +50,7 @@ Distributed under the GPL-3.0 License. See 'LICENSE.txt' for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Conact -->
+<!-- Contact -->
 ## Contact
 Please head over to my portfolio website and use the contact form to reach out to me:
 [My Portfolio Website][portfolio-url]

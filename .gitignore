@@ -101,7 +101,7 @@ MainProject/log.json
 # Mac Users #
 .DS_Store
 
-# PyCharm #
+# WebStorm #
 *.idea
 
 # Ignore all migrations #
