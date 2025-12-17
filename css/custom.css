@@ -96,7 +96,7 @@ footer span {
 
 /* *** About Page Styling *** */
 
-.change-edu-img, .change-skill-img {
+.change-edu-img, .change-skill-img, .certification-entry {
     font-family: var(--parag-font-family);
     font-size: 1vw;
 }
@@ -170,7 +170,7 @@ textarea {
         font-size: 3vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 3vw;
     }
 
@@ -196,7 +196,7 @@ textarea {
         font-size: 2.75vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 2.75vw;
     }
 
@@ -222,7 +222,7 @@ textarea {
         font-size: 2.5vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 2.5vw;
     }
 
@@ -248,7 +248,7 @@ textarea {
         font-size: 2.25vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 2.25vw;
     }
 
@@ -274,7 +274,7 @@ textarea {
         font-size: 2vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 2vw;
     }
 
@@ -300,7 +300,7 @@ textarea {
         font-size: 1.75vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 1.75vw;
     }
 
@@ -326,7 +326,7 @@ textarea {
         font-size: 1.5vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 1.5vw;
     }
 
@@ -352,7 +352,7 @@ textarea {
         font-size: 1.25vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 1.25vw;
     }
 
@@ -378,7 +378,7 @@ textarea {
         font-size: 1vw;
     }
 
-    .change-edu-img, .change-skill-img {
+    .change-edu-img, .change-skill-img, .certification-entry {
         font-size: 1vw;
     }
 
